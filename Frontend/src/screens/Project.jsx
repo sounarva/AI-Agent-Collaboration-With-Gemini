@@ -70,7 +70,7 @@ const Project = () => {
 
       // console.log(data)
 
-      if (data.sender._id == 'ai') {
+      if (data.sender._id == 'AI') {
 
         const message = JSON.parse(data.message)
 
@@ -79,6 +79,7 @@ const Project = () => {
         webContainer?.mount(message.fileTree)
 
         if (message.fileTree) {
+          console.log(message.fileTree)
           setFileTree(message.fileTree || {})
           saveFileTree(message.fileTree)
         }
@@ -373,7 +374,7 @@ const Project = () => {
                 )
               }
               {
-                iFrameUrl && webContainer && (
+                iFrameUrl && webContainer && currentFile && (
                   (<div className={`iframe-box flex flex-col h-full ${currentFile ? 'w-1/2' : 'w-full'}`}>
                     <input onChange={(e) => setIFrameUrl(e.target.value)} type="text" className='address-bar w-full p-2 bg-blue-200 text-black text-sm font-sans font-semibold' value={iFrameUrl} />
                     <iframe
