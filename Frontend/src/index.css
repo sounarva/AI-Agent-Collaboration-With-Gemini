@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: manrope;
+  src: url('../public/Manrope-Regular.ttf');
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #1C1C1C;
+  color: white;
+}
+
+#create-project h3 {
+  font-family: manrope;
+}
+
+#modal-div {
+  background-color: rgba(128, 128, 128, 0.486);
+  backdrop-filter: blur(10px);
+}
+
+.left .side-panel {
+  background-color: rgba(128, 128, 128, 0.429);
+  backdrop-filter: blur(10px);
+}
+
+.message-box {
+  scroll-behavior: smooth;
+}
+
+.message-box::-webkit-scrollbar {
+  display: none;
+}
+
+.bottom {
+  overflow: auto;
+}
+
+.code-editor-area::-webkit-scrollbar,
+pre::-webkit-scrollbar,
+code::-webkit-scrollbar {
+  display: none;
+}
+
+.iframe-portion{
+  background-color: #fff;
+}
